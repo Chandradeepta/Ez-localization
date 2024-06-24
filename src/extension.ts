@@ -6,7 +6,7 @@ import AuthSettings from "./AuthSettings";
 
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
-    "extension.translateFile",
+    "ezlocalization.localizeFile",
     async () => {
       AuthSettings.init(context);
       const settings = AuthSettings.instance;
@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
 
       const sourceFilePath = vscode.window.activeTextEditor?.document.fileName;
       if (!sourceFilePath || !sourceFilePath.endsWith(".json")) {
-        vscode.window.showErrorMessage("Open a .json file to translate.");
+        vscode.window.showErrorMessage("Open a .json file to localize.");
         return;
       }
 
@@ -94,7 +94,7 @@ export function activate(context: vscode.ExtensionContext) {
               });
 
               vscode.window.showInformationMessage(
-                `Translation completed. File saved as ${translatedFileName}`
+                `Localization completed. File saved as ${translatedFileName}`
               );
 
               return translatedFileName;
@@ -106,7 +106,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
       } catch (err: any) {
         vscode.window.showErrorMessage(
-          `Error translating file: ${err.message}`
+          `Error localizing file: ${err.message}`
         );
       }
     }

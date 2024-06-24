@@ -1,15 +1,15 @@
 {
-  "name": "eztranslation",
-  "displayName": "Ez Translation (AI)",
-  "description": "Easily translate keys into different languages using Gemini AI",
-  "version": "0.0.5",
+  "name": "ezlocalization",
+  "displayName": "Ez Localization (AI)",
+  "description": "Easily localize keys into different languages using Gemini AI",
+  "version": "1.0.0",
   "publisher": "ChandradeeptaLaha",
   "engines": {
-    "vscode": "^1.76.0"
+    "vscode": "^1.90.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Chandradeepta/Ez-translation.git"
+    "url": "https://github.com/Chandradeepta/Ez-localization.git"
   },
   "categories": [
     "Other"
@@ -19,8 +19,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.translateFile",
-        "title": "Translate File (Eztranslation)"
+        "command": "ezlocalization.localizeFile",
+        "title": "Localize File (Ez Localization)"
       }
     ]
   },
@@ -35,7 +35,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.6",
     "@types/node": "20.x",
-    "@types/vscode": "^1.76.0",
+    "@types/vscode": "^1.90.0",
     "@typescript-eslint/eslint-plugin": "^7.11.0",
     "@typescript-eslint/parser": "^7.11.0",
     "@vscode/test-cli": "^0.0.9",
@@ -45,6 +45,6 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.13.0"
+    "@google/generative-ai": "*"
   }
 }
